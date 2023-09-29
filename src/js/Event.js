@@ -1,6 +1,7 @@
 export class Event {
   constructor(parent, data) {
     this.element = document.createElement("div");
+    // this.openWindowThing = document.createElement("div")
     this.parent = parent;
     this.data = data;
     this.createElement();
@@ -15,18 +16,38 @@ export class Event {
     `;
   }
 
+
+  displayModal(modal) {
+      modal.style.display = "block";
+      console.log(this)
+      modal.innerHTML = `hello ${this.data.name}`;
+      // this.openWindowThing.innerHTML = `hello`
+   
+  }
+
+
   appendSelf() {
     this.parent.appendChild(this.element);
   }
-
+ 
   // the below function will open the modal pop-up window:
   openForm() {
     const popupButton = this.element.querySelector(".loadData");
     const modal = document.getElementById("myModal");
     const span = document.getElementsByClassName("close")[0];
-    popupButton.onclick = function () {
-      modal.style.display = "block";
-    };
+    // modal.appendChild(this.openWindowThing)
+    popupButton.addEventListener('click', () => {
+      this.displayModal(modal)
+    });
+
+
+  //   popupButton.addEventListener('click', function() {
+  //     modal.style.display = "block";
+  //     console.log(this)
+  //     modal.innerHTML = `hello ${this.data.name}`;
+  //     // this.openWindowThing.innerHTML = `hello`
+   
+  // });
     span.onclick = function () {
       modal.style.display = "none";
     };
