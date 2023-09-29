@@ -23,7 +23,48 @@ const loadEventsData = async () => {
 loadEventsData()
 
 
+const submitRegisterData = async () => {
+    const urlPOST = `https://test-api.codingbootcamp.cz/api/3cb99576/events/2/registrations`
+    const registerData = {
+      "name": "Daniel",
+      "surname": "Slezak",
+      "email": "dans@gmail.com",
+      "phonenumber": "7649209579",
+      "oldenough": "true"
+    }
+    const ourResponse = await fetch(urlPOST, {
+      "method": "POST",
+      "body": JSON.stringify(registerData),
+      "headers": {
+      'Content-Type': 'application/json'
+    }
+    })
+    const ourUsableResponse = await ourResponse.json()
+    console.log(ourUsableResponse)
+}
 
+submitRegisterData()
+
+
+// const submitRegisterData = async () => {
+//     const urlPOST = `https://test-api.codingbootcamp.cz/api/3cb99576/events/${data.id}/registrations`
+//     const registerData = {
+//       "name": "name.value";
+//       "surname": "surname.value";
+//       "email": "email.value";
+//       "phonenumber": "phonenumber.value";
+//       "oldenough": "oldenough.value"
+//     }
+//     const ourResponse = await fetch(urlPOST, {
+//       "method": "POST",
+//       "body": JSON.stringify(registerData),
+//       "headers": {
+//       'Content-Type': 'application/json'
+//     }
+//     })
+//     const ourUsableResponse = await ourResponse.json()
+//     console.log(ourUsableResponse)
+// }
 
 // const smallEvents = document.querySelector(".other-events__main-container");
 
