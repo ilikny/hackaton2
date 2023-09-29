@@ -1,3 +1,5 @@
+import { Event } from "./Event";
+
 const url = 'https://test-api.codingbootcamp.cz/api/3cb99576/events'
 
 // Paths: (ALWAYS use it inside ${})
@@ -10,10 +12,27 @@ const url = 'https://test-api.codingbootcamp.cz/api/3cb99576/events'
 const loadEventsData = async () => {
     const response = await fetch(url);
     const eventsData = await response.json();
-    eventsData.forEach(data => {
-    const event = new Event(data)
-    
-    });
+    const smallEvents = document.querySelector(".other-events__main-container");
+    eventsData.forEach((eventData) => {
+    const eventElement = new Event(smallEvents, eventData);
+
+  eventElement.appendSelf();
+});
 }
 
 loadEventsData()
+
+
+
+
+// const smallEvents = document.querySelector(".other-events__main-container");
+
+
+
+// data.forEach((eventData) => {
+
+//   const eventElement = new Event(smallEvents, eventData);
+
+//   //   smallEvents.appendChild(eventElement.element);
+//   eventElement.appendSelf();
+// });
