@@ -16,18 +16,20 @@ export class Event {
     `;
   }
 
+
   displayModal(modal) {
       modal.style.display = "block";
       console.log(this)
       modal.innerHTML = `hello ${this.data.name}`;
       // this.openWindowThing.innerHTML = `hello`
-    
+   
   }
+
 
   appendSelf() {
     this.parent.appendChild(this.element);
   }
-  
+ 
   // the below function will open the modal pop-up window:
   openForm() {
     const popupButton = this.element.querySelector(".loadData");
@@ -38,12 +40,13 @@ export class Event {
       this.displayModal(modal)
     });
 
+
   //   popupButton.addEventListener('click', function() {
   //     modal.style.display = "block";
   //     console.log(this)
   //     modal.innerHTML = `hello ${this.data.name}`;
   //     // this.openWindowThing.innerHTML = `hello`
-    
+   
   // });
     span.onclick = function () {
       modal.style.display = "none";
