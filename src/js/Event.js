@@ -17,10 +17,10 @@ export class Event {
     `;
   }
   displayModal(modal) {
-      modal.style.display = "block";
-      console.log(this)
-      modal.innerHTML = `${this.data.name}`;
-      // this.openWindowThing.innerHTML = `hello`
+    modal.style.display = "block";
+    console.log(this);
+    modal.innerHTML = `${this.data.name}`;
+    // this.openWindowThing.innerHTML = `hello`
   }
   appendSelf() {
     this.parent.appendChild(this.element);
@@ -31,26 +31,26 @@ export class Event {
     const modal = document.getElementById("myModal");
     const span = document.getElementsByClassName("close")[0];
     // modal.appendChild(this.openWindowThing)
-    popupButton.addEventListener('click', () => {
-      this.displayModal(modal)
+    popupButton.addEventListener("click", () => {
+      this.displayModal(modal);
     });
-  //   popupButton.addEventListener('click', function() {
-  //     modal.style.display = "block";
-  //     console.log(this)
-  //     modal.innerHTML = `hello ${this.data.name}`;
-  //     // this.openWindowThing.innerHTML = `hello`
-  // });
-    const span = document.getElementsByClassName("close")[0];
-    // modal.appendChild(this.openWindowThing)
-    popupButton.addEventListener('click', () => {
-      this.displayModal(modal)
-    });
-  //   popupButton.addEventListener('click', function() {
-  //     modal.style.display = "block";
-  //     console.log(this)
-  //     modal.innerHTML = `hello ${this.data.name}`;
-  //     // this.openWindowThing.innerHTML = `hello`
-  // });
+    //   popupButton.addEventListener('click', function() {
+    //     modal.style.display = "block";
+    //     console.log(this)
+    //     modal.innerHTML = `hello ${this.data.name}`;
+    //     // this.openWindowThing.innerHTML = `hello`
+    // });
+    // const span = document.getElementsByClassName("close")[0];
+    // // modal.appendChild(this.openWindowThing)
+    // popupButton.addEventListener('click', () => {
+    //   this.displayModal(modal)
+    // });
+    //   popupButton.addEventListener('click', function() {
+    //     modal.style.display = "block";
+    //     console.log(this)
+    //     modal.innerHTML = `hello ${this.data.name}`;
+    //     // this.openWindowThing.innerHTML = `hello`
+    // });
     span.onclick = function () {
       modal.style.display = "none";
     };
