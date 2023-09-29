@@ -4,11 +4,12 @@ export class Event {
     this.parent = parent;
     this.data = data;
     this.createElement();
+    this.openForm();
   }
   createElement() {
     this.element.innerHTML = `
     <div class="box__event">
-      <h3>${this.data.name}</h3>
+      <h4>${this.data.name}</h4>
       <button class="loadData">More</button>
     </div>
     `;
@@ -18,5 +19,21 @@ export class Event {
     this.parent.appendChild(this.element);
   }
 
-  // const btnClick =
+  // the below function will open the modal pop-up window:
+  openForm() {
+    const popupButton = this.element.querySelector(".loadData");
+    const modal = document.getElementById("myModal");
+    const span = document.getElementsByClassName("close")[0];
+    popupButton.onclick = function () {
+      modal.style.display = "block";
+    };
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  }
 }
