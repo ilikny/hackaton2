@@ -2,6 +2,7 @@ export class Event {
   constructor(parent, data) {
     this.element = document.createElement("div");
     // this.openWindowThing = document.createElement("div")
+    // this.openWindowThing = document.createElement("div")
     this.parent = parent;
     this.data = data;
     this.createElement();
@@ -106,15 +107,26 @@ export class Event {
     const modal = document.getElementById("myModal");
     const span = document.getElementsByClassName("close")[0];
     // modal.appendChild(this.openWindowThing)
-    popupButton.addEventListener('click', () => {
-      this.displayModal(modal)
+    popupButton.addEventListener("click", () => {
+      this.displayModal(modal);
     });
-  //   popupButton.addEventListener('click', function() {
-  //     modal.style.display = "block";
-  //     console.log(this)
-  //     modal.innerHTML = `hello ${this.data.name}`;
-  //     // this.openWindowThing.innerHTML = `hello`
-  // });
+    //   popupButton.addEventListener('click', function() {
+    //     modal.style.display = "block";
+    //     console.log(this)
+    //     modal.innerHTML = `hello ${this.data.name}`;
+    //     // this.openWindowThing.innerHTML = `hello`
+    // });
+    // const span = document.getElementsByClassName("close")[0];
+    // // modal.appendChild(this.openWindowThing)
+    // popupButton.addEventListener('click', () => {
+    //   this.displayModal(modal)
+    // });
+    //   popupButton.addEventListener('click', function() {
+    //     modal.style.display = "block";
+    //     console.log(this)
+    //     modal.innerHTML = `hello ${this.data.name}`;
+    //     // this.openWindowThing.innerHTML = `hello`
+    // });
     span.onclick = function () {
       modal.style.display = "none";
     };
@@ -125,40 +137,3 @@ export class Event {
     };
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Message Daniel, NRDaniels
-
-
-
-
-
-
-
-
-
-// Return to add a new line
-// mobile icon
-// Stay up to date from anywhere with the Slack mobile app
-
-
-
