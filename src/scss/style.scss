@@ -91,16 +91,22 @@ header {
   width: 300px;
 }
 
-h3 {
+.bullshit {
   transform: rotateZ(270deg);
   width: 150px;
   height: 30px;
   margin: 0;
+  height: 200px;
 }
 
-img {
+.img {
   width: 200px;
+  height: 200px;
 }
+
+// img {
+//   width: 200px;
+// }
 
 .featured-event__text-container {
   margin: 10px;
@@ -111,78 +117,82 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-    max-width: 720px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
 .box__event {
-    background-color: $favoritegray;
-    box-shadow: 0 10px 13px -7px rgba(0, 0, 0, 0.4), 0 0 5px 2px transparent;
-    border-radius: 20px;
-    width: 15rem;
-    height: 15rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    
-    cursor: pointer;
-    &:hover {
-        transform: scale(1.02);
-    }
+  background-color: $favoritegray;
+  box-shadow: 0 10px 13px -7px rgba(0, 0, 0, 0.4), 0 0 5px 2px transparent;
+  border-radius: 20px;
+  width: 15rem;
+  height: 15rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
 .modal__div {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 50%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal__div {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  img {
+    width: 20rem;
+  }
 }
 
 // the close button
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.event__image{
+.event__image {
   width: 50rem;
 }
 
 .event__thumbnail {
-    max-width: 100px;
+  max-width: 100px;
 }
 
 .perfect_btn {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .btn_text {
-    color: red;
-    font-style: bold;
+  color: red;
+  font-style: bold;
 }

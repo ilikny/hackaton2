@@ -68,9 +68,6 @@ export class Event {
       const tel = document.querySelector('.tel');
       const oldenough = document.querySelector('.oldenough');
 
-
-
-
       // const register__button = document.querySelector('.register__button')
       const registerForm = modal.querySelector('#register')
       registerForm.addEventListener('submit', async (e) => {
