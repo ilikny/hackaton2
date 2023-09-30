@@ -23,6 +23,35 @@ const loadEventsData = async () => {
 loadEventsData()
 
 
+popupButton.addEventListener("click", () => {
+      this.displayModal(modal);
+    });
+    //   popupButton.addEventListener('click', function() {
+    //     modal.style.display = "block";
+    //     console.log(this)
+    //     modal.innerHTML = `hello ${this.data.name}`;
+    //     // this.openWindowThing.innerHTML = `hello`
+    // });
+    // const span = document.getElementsByClassName("close")[0];
+    // // modal.appendChild(this.openWindowThing)
+    // popupButton.addEventListener('click', () => {
+    //   this.displayModal(modal)
+    // });
+    //   popupButton.addEventListener('click', function() {
+    //     modal.style.display = "block";
+    //     console.log(this)
+    //     modal.innerHTML = `hello ${this.data.name}`;
+    //     // this.openWindowThing.innerHTML = `hello`
+    // });
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+
 // const submitRegisterData = async () => {
 //     const urlPOST = `https://test-api.codingbootcamp.cz/api/3cb99576/events/2/registrations`
 //     const registerData = {

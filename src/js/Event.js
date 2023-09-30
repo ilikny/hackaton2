@@ -20,6 +20,7 @@ export class Event {
       modal.style.display = "block";
       console.log(this)
       modal.innerHTML = `
+      <span class="close">&times;</span>
       <section class="description">
         <h1>${this.data.name}</h1>
         <h3>${this.data.date}</h3>
